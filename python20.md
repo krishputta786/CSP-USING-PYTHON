@@ -271,4 +271,79 @@ print("GCD of",a,"and",b,"is",":",gcd(a,b))
 
 <img width="772" height="56" alt="Screenshot 2025-08-15 232255" src="https://github.com/user-attachments/assets/ddde0abe-7c24-403a-b290-3e005ec7f882" />
 
+<b>13. Check whether a string is a palindrome.</b>
 
+<b>code:</b>
+
+def palindrome(s):
+
+    s=s.lower().replace(" ","")
+    return s==s[::-1]
+    
+s=input("enter a string: ")
+
+if palindrome(s):
+
+    print(f"{s} is palindrome")
+
+else:
+
+    print("f{s} is not palindrome")
+
+<b>output:</b>
+
+<img width="756" height="46" alt="Screenshot 2025-08-15 233021" src="https://github.com/user-attachments/assets/ef4b18e9-9fe4-4e02-ab2a-b94d79042feb" />
+
+<b>14.Find the longest substring without repeating characters.</b>
+
+<b>code:</b>
+
+def longest_unique_substring(s):
+
+    longest = ""
+    n = len(s)
+    for i in range(n):
+        current = ""
+        for j in range(i, n):
+            if s[j] in current:
+                break
+            current += s[j]
+            if len(current) > len(longest):
+                longest = current
+    return longest
+
+text = input("Enter a string: ")
+
+result = longest_unique_substring(text)
+
+print("Longest substring without repeating characters:", result)
+
+<b>output:</b>
+
+<img width="744" height="43" alt="Screenshot 2025-08-15 233900" src="https://github.com/user-attachments/assets/f7f289de-cb88-4cd5-be2a-db6b6af19011" />
+
+<b>15.Calculate the sum of digits of a number until it becomes a single digit.</b>
+
+<b>code:</b>
+
+def sum_to_singledigit(n):
+
+    while n>=10:
+        s=0
+        while n>0:
+            s+=n%10
+            n//=10
+        n=s
+    return n
+
+n = int(input("Enter a number: "))
+
+result = sum_to_singledigit(n)
+
+print("Single digit sum is:", result)
+
+<b>output:</b>
+
+<img width="969" height="38" alt="Screenshot 2025-08-15 234723" src="https://github.com/user-attachments/assets/626a30d9-f6c4-4065-9e13-e2340aabf916" />
+
+<b>16. Sort a list in ascending order without using sort().</b>
