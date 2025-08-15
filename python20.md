@@ -347,3 +347,99 @@ print("Single digit sum is:", result)
 <img width="969" height="38" alt="Screenshot 2025-08-15 234723" src="https://github.com/user-attachments/assets/626a30d9-f6c4-4065-9e13-e2340aabf916" />
 
 <b>16. Sort a list in ascending order without using sort().</b>
+
+<b>code:</b>
+
+def sort_list(l):
+
+    for i in range(len(l)):
+        for j in range(i,len(l)):
+            if l[i]>l[j]:
+                temp=l[i]
+                l[i]=l[j]
+                l[j]=temp
+    print(' '.join(str(i) for i in l))
+    
+l=list(map(int,input("enter list elements: ").split()))
+
+print("sorted list is: ",end=' ')
+
+sort_list(l)            
+
+<b>output:</b>
+
+<img width="949" height="38" alt="Screenshot 2025-08-15 235744" src="https://github.com/user-attachments/assets/384eb713-2c7d-4c64-adac-87bcf53d6810" />
+
+<b>17.Find the sum of all elements in a list.</b>
+
+<b>code:</b>
+
+def list_sum(l):
+
+    s=0
+    for i in l:
+        s+=i
+    return s
+    
+l=list(map(int,input("enter list elements: ").split()))
+
+print(f"sum of elements: {list_sum(l)}")
+
+<b>output:</b>
+
+<img width="659" height="39" alt="Screenshot 2025-08-16 000331" src="https://github.com/user-attachments/assets/91e7e66c-058f-4d16-a48a-014b0a5eab02" />
+
+<b>18.Take a name as input and greet the user.</b>
+
+<b>code:</b>
+
+def greet(s):
+
+    print("Hello "+s)
+
+s=input("enter your name: ")
+
+greet(s)
+
+<b>output:</b>
+
+<img width="600" height="46" alt="Screenshot 2025-08-16 000643" src="https://github.com/user-attachments/assets/2e529a76-0137-4f9a-b465-416322bdd2a5" />
+
+<b>19.Print the first 10 natural numbers using a loop.</b>
+
+<b>code:</b>
+
+def num(s):
+
+    i = 1
+    while i <= s:
+        print(i, end=" ")
+        i += 1
+
+s=int(input("enter a number: "))
+
+num(s)
+
+<b>output:</b>
+
+<img width="491" height="39" alt="Screenshot 2025-08-16 001125" src="https://github.com/user-attachments/assets/42d8b3b1-e0cf-4889-8f46-41793bf97ad9" />
+
+<b>20.Print all numbers divisible by 3 between 1 and 50.</b>
+
+<b>code:</b>
+
+def num(s):
+
+    i = 1
+    while i <= s:
+        if i%3==0:
+            print(i, end=" ")
+        i += 1
+
+s=int(input("enter a number: "))
+
+num(s)
+
+<b>output:</b>
+
+<img width="481" height="35" alt="Screenshot 2025-08-16 001400" src="https://github.com/user-attachments/assets/7f6db8f6-ce6d-41d7-a80b-baf9d5aadf76" />
