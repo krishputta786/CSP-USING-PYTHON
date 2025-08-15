@@ -128,3 +128,60 @@ print(f"The number of digits are: {no_of_digits(n)}")
 
 <img width="703" height="55" alt="Screenshot 2025-08-15 221822" src="https://github.com/user-attachments/assets/d8f78d87-e2f4-4c15-a0e2-149bf6ecbf15" />
 
+<b>7.Program to append elements to the list.</b>
+
+<b>code:</b>
+
+def append_ele(n):
+
+    l=[]
+    for i in range(n):
+        ele=int(input(f"enter ele{i+1}: "))
+        l+=[ele]
+    return l
+    
+n=int(input("enter number of elements to add: "))
+
+print(f"The list elements are: {append_ele(n)}")
+
+<b>output:</b>
+
+<img width="918" height="139" alt="Screenshot 2025-08-15 223331" src="https://github.com/user-attachments/assets/56c87f21-6ef1-4b0a-a92c-b47e47aab1f5" />
+
+<b>8.Merge two sorted lists into one sorted list without using sort().</b>
+
+<b>code: </b>
+
+def sort_list(l1,l2):
+
+    l3=[]
+    i,j=0,0
+    while i<len(l1) and j<len(l2):
+        if l1[i]<l2[j]:
+            l3.append(l1[i])
+            i+=1
+        else:
+            l3.append(l2[j])
+            j+=1
+    while i<len(l1):
+        l3.append(l1[i])
+        i+=1
+    while j<len(l2):
+        l3.append(l2[j])
+        j+=1
+    return l3
+
+l1=list(map(int,input("enter list1 elements: ").split()))
+
+l2=list(map(int,input("enter list1 elements: ").split()))
+
+res=sort_list(l1,l2)
+
+print("merged sorted list: ",res)
+
+<b>output:</b>
+
+<img width="721" height="54" alt="Screenshot 2025-08-15 224712" src="https://github.com/user-attachments/assets/1c2aea4c-476e-40b1-9e2b-5aa6b7368330" />
+
+<b>
+
