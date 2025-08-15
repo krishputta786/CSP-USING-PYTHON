@@ -183,5 +183,92 @@ print("merged sorted list: ",res)
 
 <img width="721" height="54" alt="Screenshot 2025-08-15 224712" src="https://github.com/user-attachments/assets/1c2aea4c-476e-40b1-9e2b-5aa6b7368330" />
 
-<b>
+<b>9.Find the common elements in three lists.</b>
+
+<b>code:</b>
+
+def common(l1,l2,l3):
+
+    c=[]
+    for i in l1:
+        if i in l2 and i in l3 and i not in c:
+            c.append(i)
+    return c
+    
+l1=list(map(int,input("enter list1 elements: ").split()))
+
+l2=list(map(int,input("enter list2 elements: ").split()))
+
+l3=list(map(int,input("enter list3 elements: ").split()))
+
+res=common(l1,l2,l3)
+
+print("common elements: ",res)
+
+<b>output:</b>
+
+<img width="857" height="85" alt="Screenshot 2025-08-15 225706" src="https://github.com/user-attachments/assets/146f5586-e711-4296-b59f-659ae16375b5" />
+
+<b>10.Print all even numbers between 1 and 100.</b>
+
+<b>code:</b>
+
+def even(n):
+
+    for i in range(1,n+1):
+        if i%2==0:
+            print(i,end=' ')
+            
+n=int(input("enter a number: "))
+
+even(n)
+
+<b>output:</b>
+
+<img width="1525" height="56" alt="Screenshot 2025-08-15 230103" src="https://github.com/user-attachments/assets/608332f0-9151-4ca1-af30-6c419af66cb3" />
+
+<b>11. Generate the Fibonacci series up to n terms.</b>
+
+<b>code:</b>
+
+def fibonacci(n):
+
+    a,b=0,1
+    print(a,b,end=" ")
+    for i in range(2,n):
+        c=a+b
+        print(c,end=" ")
+        a=b
+        b=c
+        
+n=int(input("enter a number: "))
+
+print("Fibonacci series: ",end=" ")
+
+fibonacci(n)
+
+<b>output:</b>
+
+<img width="777" height="46" alt="Screenshot 2025-08-15 231622" src="https://github.com/user-attachments/assets/d034d24f-fede-4f10-a691-69b36872e212" />
+
+<b>12. Find the GCD of two numbers.</b>
+
+<b>code:</b>
+
+def gcd(a,b):
+
+    while b!=0:
+        a,b=b,a%b
+    return a
+    
+a=int(input("enter first number: "))
+
+b=int(input("enter second number: "))
+
+print("GCD of",a,"and",b,"is",":",gcd(a,b))
+
+<b>output:</b>
+
+<img width="772" height="56" alt="Screenshot 2025-08-15 232255" src="https://github.com/user-attachments/assets/ddde0abe-7c24-403a-b290-3e005ec7f882" />
+
 
