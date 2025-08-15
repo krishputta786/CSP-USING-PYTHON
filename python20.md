@@ -54,3 +54,77 @@ print("merged: ",m)
 <b>output:</b>
 
 <img width="610" height="107" alt="Screenshot 2025-08-15 215512" src="https://github.com/user-attachments/assets/a25b8391-3f66-4586-8110-2ee217046deb" />
+
+<b>4)Program to find factorial of the given number?</b>
+
+<b>code:</b>
+
+def factorial(n):
+
+    if n < 0:
+        return "Factorial not defined for negative numbers."
+    fact = 1
+    for i in range(1, n+1):
+        fact *= i
+    return fact
+
+n = int(input("Enter a number: "))
+
+print(f"The factorial of {n} is: {factorial(n)}")
+
+<b>output:</b>
+
+<img width="628" height="40" alt="Screenshot 2025-08-15 103844" src="https://github.com/user-attachments/assets/7fdc2ca4-4951-4b04-aa6a-029b4339521c" />
+
+<b>5.Program to check Armstrong number.</b>
+
+<b>code:</b>
+
+def armstrong_or_not(n):
+
+    l=len(str(n))
+    s=0
+    temp=n
+    while(n!=0):
+        r=n%10
+        s+=pow(r,l)
+        n//=10
+    return s==temp
+    
+n=int(input("enter a number: "))
+
+if armstrong_or_not(n):
+
+    print("It is armstrong number")
+else:
+
+    print("It is not armstrong number")
+
+
+<b>output:</b>
+
+<img width="562" height="44" alt="Screenshot 2025-08-15 220826" src="https://github.com/user-attachments/assets/08b92f06-8c59-4575-b983-d557c1d3143e" />
+
+<b>6.program for counting the digits in a number.</b>
+
+<b>code:</b>
+
+def no_of_digits(n):
+
+    if n==0:
+        return 1
+    count=0
+    n=abs(n)
+    while n>0:
+        count+=1
+        n//=10
+    return count
+    
+n=int(input("enter a number: "))
+
+print(f"The number of digits are: {no_of_digits(n)}")
+
+<b>output:</b>
+
+<img width="703" height="55" alt="Screenshot 2025-08-15 221822" src="https://github.com/user-attachments/assets/d8f78d87-e2f4-4c15-a0e2-149bf6ecbf15" />
+
